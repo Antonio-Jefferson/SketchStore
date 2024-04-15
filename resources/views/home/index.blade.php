@@ -2,8 +2,9 @@
 
 @section('title', 'Home')
 @section('content')
-  @foreach ($products as $product)
-    <div class="flex-col justify-start items-end w-56 h-72 rounded-md shadow-md shadow-slate-400 relative mb-10">
+  <div class="mt-36 flex gap-3 flex-wrap">
+    @foreach ($products as $product)
+    <div class="flex-col justify-start items-end w-56 h-72 rounded-md shadow-md shadow-slate-400 relative mt-5">
       <img class="w-52 h-[140px]" src="{{$product->image_url}}" alt="lapis de cor">
       <div class="p-2">
         <p class="text-xs font-medium">{{$product->name}}</p>
@@ -11,8 +12,13 @@
       </div>
       <div class="flex w-full h-10 p-2 items-center absolute bottom-0 bg-primary justify-center gap-5 rounded-b-md cursor-pointer">
         <img src="{{ asset('assets/icons/shopping-bag.svg') }}" alt="">
-        <p class="text-sm text-slate-50">COMPRAR</p>
+        <form action="{{ route('cart-store', ['id'=>$product->id]) }}" method="POST">
+          @csrf
+          <button type="submit" class="text-sm text-slate-50">COMPRAR</button>
+      </form>
       </div>
     </div>
   @endforeach
+  </div>
+ 
 @endsection
