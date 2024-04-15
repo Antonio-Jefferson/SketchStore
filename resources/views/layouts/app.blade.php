@@ -22,7 +22,7 @@
         <img class="w-8" src="{{ asset('assets/icons/search.svg') }}" alt="Ícone">
       </div>
       <div class="flex items-center gap-10">
-        <p class="text-lg text-slate-50">Faça <a href="{{route('singin-create')}}">LOGIN</a> ou <br> <a href="{{route('singup-create')}}">CADASTRE-SE</a></p>
+        <p class="text-lg text-slate-50">Faça <a class="font-semibold text-sky-400" href="{{route('singin-create')}}">LOGIN</a> ou <br> <a class="font-semibold text-sky-400" href="{{route('singup-create')}}">CADASTRE-SE</a></p>
         <img class="w-14" src="{{ asset('assets/icons/menu.svg') }}" alt="Ícone">
       </div>
     </header>
