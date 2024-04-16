@@ -4,14 +4,23 @@
 @section('content')
   <div class="mt-36">
     <div class="flex gap-32 mt-24">
-      <div class="w-[496px] h-[645px] bg-slate-200">
+      <div class="w-[496px] h-auto mb-5 bg-slate-200">
         <div class="flex justify-between w-full h-14 bg-slate-300 p-5">
           <h1 class="text-xl font-medium">Total do pedido:</h1>
-          <p class="text-xl font-medium">R$total</p>
+          <p class="text-xl font-medium">R${{$total}}</p>
         </div>
-        <ol class="p-5">
-            <li class="text-2xl font-light">nome</li>
-        </ol>
+        <div class="flex justify-between items-center pl-5 pr-5">
+          <h2>Produto</h2>
+          <h2>Preço</h2>
+          <h2>Quantidade</h2>
+        </div>
+        @foreach($itemsCart as $item)
+          <ol class="p-5 flex justify-between items-center">
+              <li class="text-2xl font-light">{{$item['name']}}</li>
+              <p>{{$item['price']}}</p>
+              <p>{{$item['quantity']}}</p>
+          </ol>
+        @endforeach
       </div>
       <div>
         <div class="flex justify-center">
