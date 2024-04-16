@@ -15,7 +15,7 @@
         <a href="{{ route('cart-index') }}" class="flex w-16 h-10 bg-white rounded-md items-center  justify-evenly">
           <img class="w-8" src="{{ asset('assets/icons/cart.svg') }}" alt="Ícone">
           <div class="text-2xl">
-              {{0}}
+              {{$quantity}}
           </div>
         </a>
         <input  class="w-[500px] h-11 p-2 rounded-lg outline-none" type="text" placeholder="Buscar...">

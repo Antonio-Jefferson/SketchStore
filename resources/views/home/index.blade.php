@@ -2,7 +2,9 @@
 
 @section('title', 'Home')
 @section('content')
-  <div class="mt-36 flex gap-3 flex-wrap">
+    <img class="mt-36 w-full" src="{{asset('assets/images/gif_promo.gif')}}" alt="promoção">
+    <h2 class="text-xl font-bold text-slate-700 block">Produtos</h2>
+  <div class=" flex gap-3 flex-wrap">
     @foreach ($products as $product)
     <div class="flex-col justify-start items-end w-56 h-72 rounded-md shadow-md shadow-slate-400 relative mt-5">
       <img class="w-52 h-[140px]" src="{{$product->image_url}}" alt="lapis de cor">

@@ -20,7 +20,7 @@
               <div class="flex items-center justify-between w-32 h-8 p-1 border rounded-2xl">
                   <button class="text-xl font-medium p-2 decrease-quantity" data-item-id="{{$item['product_id']}}">-</button>
                   <span class="h-full bg-slate-600 border"></span>
-                  <input type="number" class="text-m text-center font-normal w-16 h-6 border-none outline-none quantity" value="{{$item['quantity']}}" data-item-id="{{$item['product_id']}}"/>
+                  <p class="text-m text-center font-normal w-16 h-6 border-none outline-none quantity" data-item-id="{{$item['product_id']}}">{{$item['quantity']}}</p>
                   <span class="h-full bg-slate-600 border"></span>
                   <button class="text-xl font-medium p-2 increase-quantity" data-item-id="{{$item['product_id']}}">+</button>
               </div>

@@ -47,7 +47,7 @@
                 <textarea class="rounded-md" cols="51" rows="5"></textarea>
             </div>
           </div>
-          <button type="submit" class="mt-10 w-full h-14  bg-orange-500 text-white py-2 px-4 rounded-md hover:bg-orange-600">Finalizar Compra</button>
+          <button type="submit" class="mt-10 w-full h-14  bg-primary text-white py-2 px-4 rounded-md hover:bg-orange-600">Finalizar Compra</button>
         </form>
       </div>
     </div>
